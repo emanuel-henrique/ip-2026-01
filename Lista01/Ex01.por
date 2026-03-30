@@ -1,22 +1,21 @@
-programa
-{
-	funcao inicio()
-	{
-		real n1, n2, n3, media
+package main
 
-		leia(n1, n2, n3)
+import (
+	"fmt"
+)
 
-		media = (n1 + n2 + n3) / 3
+func main() {
+	var n1, n2, n3, media float64
 
-		escreva("MEDIA = ", media, "\n")
+	fmt.Scan(&n1, &n2, &n3)
 
-		se (media >= 6)
-		{
-			escreva("APROVADO\n")
-		}
-		senao
-		{
-			escreva("REPROVADO\n")
-		}
+	media = (n1 + n2 + n3) / 3
+
+	fmt.Printf("MEDIA = %.2f\n", media)
+
+	if media >= 6 {
+		fmt.Println("APROVADO")
+	} else {
+		fmt.Println("REPROVADO")
 	}
 }
